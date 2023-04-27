@@ -13,7 +13,8 @@ const Detail = ({ Detail }) => {
   return (
     <div style={{ marginTop: "25px" }}>
       {Detail.filter((el) => el.title === title).map((element, index) => (
-        <div className="card" key={index}>
+        <div className="card mb-3" key={index}>
+          <iframe src={element.iframe} title={element.title}></iframe>
           <div className="card-body">
             <h5 className="card-title">{element.title}</h5>
             <p className="card-text">{element.description}</p>
